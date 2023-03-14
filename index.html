@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="flexBox">
+      <div class="title"><h1>FlexBox Gallery</h1></div>
+      <div class="flexGallery">
+        <img src="pics/♡ Slam Dumk_.jpeg" alt="Sakuragi" />
+        <img src="pics/chrollo !.jpeg" alt="chrollo lucifer" />
+        <img src="pics/nnefedorkaic.jpeg" alt="Guts" />
+        <img
+          src="pics/Roronoa Zoro by me (aboude_art).jpeg"
+          alt="Roronoa zoro"
+        />
+        <img src="pics/Satoru Gojo.jpeg" alt="Saturo gojo" />
+        <img src="pics/téléchargement.jpeg" alt="Hashirama senju" />
+        <img
+          src="pics/Gol d roger _ Personagens de anime, Desenho de anime, Anime.jpeg"
+          alt="Gol D roger"
+        />
+        <img src="pics/allmight@12_17update on Twitter.jpeg" alt="Allmight" />
+      </div>
+    </div>
+    <div class="grid">
+      <div class="title"><h1>Grid Gallery</h1></div>
+      <div class="gridGallery">
+        <img src="pics/♡ Slam Dumk_.jpeg" alt="Sakuragi" />
+        <img src="pics/chrollo !.jpeg" alt="chrollo lucifer" />
+        <img src="pics/nnefedorkaic.jpeg" alt="Guts" />
+        <img
+          src="pics/Roronoa Zoro by me (aboude_art).jpeg"
+          alt="Roronoa zoro"
+        />
+        <img src="pics/Satoru Gojo.jpeg" alt="Saturo gojo" />
+        <img src="pics/téléchargement.jpeg" alt="Hashirama senju" />
+        <img
+          src="pics/Gol d roger _ Personagens de anime, Desenho de anime, Anime.jpeg"
+          alt="Gol D roger"
+        />
+        <img src="pics/allmight@12_17update on Twitter.jpeg" alt="Allmight" />
+      </div>
+    </div>
+    <div class="title"><h1>Input counter</h1></div>
+    <div class="counter">
+      <p id="count-display">0</p>
+      <input id="count-input" type="text" value="0" />
+      <div>
+        <button id="decrement">-</button>
+        <button id="increment">+</button>
+      </div>
+    </div>
+    <script>
+      const countInputEl = document.getElementById("count-input");
+      const countDisplayEl = document.getElementById("count-display");
+      const incrementBtn = document.getElementById("increment");
+      const decrementBtn = document.getElementById("decrement");
+
+      let count = 0;
+      countDisplayEl.textContent = count;
+      countInputEl.value = count;
+
+      incrementBtn.addEventListener("click", () => {
+        count++;
+        countDisplayEl.textContent = count;
+        countInputEl.value = count;
+      });
+      decrementBtn.addEventListener("click", () => {
+        count--;
+        countDisplayEl.textContent = count;
+        countInputEl.value = count;
+      });
+      countInputEl.addEventListener("input", () => {
+        count = parseInt(countInputEl.value) || 0;
+        countDisplayEl.textContent = count;
+      });
+    </script>
+  </body>
+</html>
